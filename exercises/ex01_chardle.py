@@ -1,4 +1,4 @@
-"""EX01 - Chardle - A cute step toward Wordle. """
+"""EX01 - Chardle - A cute step toward Wordle."""
 
 __author__ = "730221956"
 
@@ -14,7 +14,7 @@ if len(letter) > 1 or len(letter) < 1:
 print("Searching for " + letter + " in " + word)
 
 count = int = 0
-if word[0] ==letter:
+if word[0] == letter:
     print(letter + " found at index 0")
     count = count + 1
 if word[1] == letter:
@@ -30,8 +30,8 @@ if word[4] == letter:
     print(letter + " found at index 4")
     count = count + 1
 if count == 0:
-    print("No instances of " + letter + " found in " + word)
+    print("No instance of " + letter + " found in " + word)
 if count == 1:
-    print(str(count) + " intances of " + letter + " found in " + word)
+    print(str(count) + " intance of " + letter + " found in " + word)
 if count > 1:
-    print(str(count) + " intances of" + letter + " found in " + word)
+    print(str(count) + " intance of" + letter + " found in " + word)
