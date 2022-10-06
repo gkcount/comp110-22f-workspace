@@ -4,7 +4,6 @@ __author__ = "730221956"
 
 points: int 
 player: str
-import random
 
 
 def main() -> None:
@@ -50,7 +49,6 @@ def personality_quiz_one() -> None:
         print(f"This is a solid color {player}")
         points += 2
     
-    
     print("Respond 1 for True and 2 for False to the next three questions.")
     print(input("You are a morning person."))
     trueorfalse = input()
@@ -78,9 +76,10 @@ def personality_quiz_one() -> None:
 def personality_quiz_two() -> None:
     """The second adventure option."""
     global points
+    global player
     points = 0
     print(f"Welcome to Personality quiz two {player}!")
-    print(input("What is your favorite season?"))
+    print(str(input("What is your favorite season?")))
     season: str(input("What is your favorite season?"))
     if len(season) == 6:
         print("Great choice!")
@@ -129,6 +128,7 @@ def personality_quiz_two() -> None:
 
 def points_calculator(points: int) -> int:
     """After interacting with the player for the last time, the final score will be calculated."""
+    global player
     HEART_EYES: str = "\U0001F60D"
     STAR_EYES: str = "\U0001F929"
     MONEY_MOUTH: str = "\U0001F911"
@@ -136,33 +136,31 @@ def points_calculator(points: int) -> int:
     ANNOYED_FACE: str = "\U0001F612"
     print(f"This is the final question {player}!")
     number = input(int("Pick a number between 1-100: "))
-    if number in range (0,19):
+    if number in range(0, 19):
         print(f"Your emoji is {ANNOYED_FACE}")
         points += 2
-    if number in range (20, 39):
-        print("Good choice! Your emoji is {BLANK_FACE}")
+    if number in range(20, 39):
+        print(f"Good choice! Your emoji is {BLANK_FACE}")
         points += 1
-    if number in range (40, 59):
-        print("Awesome! Your emoji is {MONEY_MOUTH}")
+    if number in range(40, 59):
+        print(f"Awesome! Your emoji is {MONEY_MOUTH}")
         points += 3
-    if number in range (60, 79):
-        print("COOL! Your emoji is {STAR_EYES}")
+    if number in range(60, 79):
+        print(f"COOL! Your emoji is {STAR_EYES}")
         points += 4
-    if number in range (80, 100):
-        print("Nice! Your emoji is {HEART_EYES}")
+    if number in range(80, 100):
+        print(f"Nice! Your emoji is {HEART_EYES}")
         points += 5
     return points
 
 
-    points()
-    print("The quiz has ended!")
-    print(input("Key in the number 1 to play again. Key in 2 to stop and exit the quiz."))
-    response: int
-    if response == 1:
-        main()
-    if response == 2:
-        exit()
-    if __name__ == "__main__":
-        main()
-
-#game loop call main again at then end of the
+points()
+print("The quiz has ended!")
+print(input("Key in the number 1 to play again. Key in 2 to stop and exit the quiz."))
+response: int
+if response == 1:
+    main()
+if response == 2:
+    exit()
+if __name__ == "__main__":
+    main()
