@@ -152,15 +152,6 @@ def points_calculator(points: int) -> int:
         print(f"Nice! Your emoji is {HEART_EYES}")
         points += 5
     return points
-
-
-points()
-print("The quiz has ended!")
-print(input("Key in the number 1 to play again. Key in 2 to stop and exit the quiz."))
-response: int
-if response == 1:
-    main()
-if response == 2:
-    exit()
+    
 if __name__ == "__main__":
     main()

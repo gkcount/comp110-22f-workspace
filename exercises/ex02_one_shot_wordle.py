@@ -2,9 +2,11 @@
 
 __author__ = "730221956"
 
+
+
 WORDLE: str = str("python")
 Character_number: int = len(WORDLE)
-Estimate: str = str (input(f"What is your (letters) -letter guess?"))
+Estimate: str = str (input ("What is your " + str(Character_number) + " letter guess?"))
 WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
